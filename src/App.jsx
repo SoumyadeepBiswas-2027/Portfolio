@@ -1,9 +1,12 @@
 import './App.css'
+import Navbar from './components/Navbar'
 function App() {
 
   return (
     <>
-      <h1>Welcome to My App</h1>
+      <div className="min-h-screen flex flex-col bg-grey-50">
+        <Navbar/>
+      </div>
     </>
   )
 }
