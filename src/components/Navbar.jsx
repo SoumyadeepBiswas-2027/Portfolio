@@ -1,26 +1,59 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
   return (
-    <nav className="bg-slate-800 shadow-lg flex items-center justify-around py-3 px-32 fixed top-0 left-0 w-full">
-      <Link
-        to="/"
-        className="py-1 px-3 text-lg font-light text-white hover:text-sky-300 rounded-2xl hover:hg-slate-700 transition duration-300"
-      >
-        Home
-      </Link>
-      <Link
-        to="/about"
-        className="py-1 px-3 text-lg font-light text-white hover:text-sky-300 rounded-2xl hover:hg-slate-700 transition duration-300"
-      >
-        About
-      </Link>
-      <Link
-        to="/contact"
-        className="py-1 px-3 text-lg font-light text-white hover:text-sky-300 rounded-2xl hover:hg-slate-700 transition duration-300"
-      >
-        Contact
-      </Link>
+    <nav
+      className="fixed top-6 left-1/2 -translate-x-1/2 z-50
+      backdrop-blur-xl bg-white/10 border border-white/20 
+      rounded-full px-20 py-2">
+        
+      <ul className="flex items-center gap-16 text-gray-300 text-lg tracking-wide">
+        <NavLink to="/" className="flex flex-col items-center hover:text-white">
+          {({ isActive }) => (
+            <>
+              Home
+              <span
+                className={`w-2 h-2 mt-1 rounded-full bg-lime-400 transition-all duration-300 ${
+                  isActive ? "opacity-100 scale-100" : "opacity-0 scale-0"
+                }`}
+              />
+            </>
+          )}
+        </NavLink>
+
+        <NavLink
+          to="/projects"
+          className="flex flex-col items-center hover:text-white"
+        >
+          {({ isActive }) => (
+            <>
+              Projects
+              <span
+                className={`w-2 h-2 mt-1 rounded-full bg-lime-400 transition-all duration-300 ${
+                  isActive ? "opacity-100 scale-100" : "opacity-0 scale-0"
+                }`}
+              />
+            </>
+          )}
+        </NavLink>
+
+        <NavLink
+          to="/contact"
+          className="flex flex-col items-center hover:text-white"
+        >
+          {({ isActive }) => (
+            <>
+              Contact
+              <span
+                className={`w-2 h-2 mt-1 rounded-full bg-lime-400 transition-all duration-300 ${
+                  isActive ? "opacity-100 scale-100" : "opacity-0 scale-0"
+                }`}
+              />
+            </>
+          )}
+        </NavLink>
+      </ul>
     </nav>
   );
 };
