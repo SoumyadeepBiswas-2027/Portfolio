@@ -1,5 +1,6 @@
 import DockIcons from "../BitsStore/DockIcons";
 import TextTypeStyle from "../BitsStore/TextTypeStyle";
+import LogoLoopIcons from "../BitsStore/LogoLoopIcons";
 
 const Home = () => {
   return (
@@ -13,7 +14,11 @@ const Home = () => {
       <p className="text-gray-400 text-lg max-w-xl mt-2">
         Transforming ideas into seamless, interactive web experiences.
       </p>
-      <DockIcons/>
+      <DockIcons />
+
+      <div className="mt-20 opacity-80">
+        <LogoLoopIcons />
+      </div>
     </div>
   );
 };
