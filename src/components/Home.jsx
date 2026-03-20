@@ -2,7 +2,7 @@ import DockIcons from "../BitsStore/DockIcons";
 import TextTypeStyle from "../BitsStore/TextTypeStyle";
 import LogoLoopIcons from "../BitsStore/LogoLoopIcons";
 import TextEffect from "@/BitsStore/TextEffect";
-import Accordion from "./Tools/Accordion";
+import Accordion from "../Tools/Accordion";
 
 const Home = () => {
   return (
@@ -22,7 +22,10 @@ const Home = () => {
         <LogoLoopIcons />
       </div>
 
-        <TextEffect/>    
+      <div className="px-6">
+        <TextEffect />
+      </div>
+      <Accordion />
     </div>
   );
 };
