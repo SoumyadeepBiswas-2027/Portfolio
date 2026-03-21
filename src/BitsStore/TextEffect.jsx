@@ -7,7 +7,8 @@ const TextEffect = () => {
       text="What I Do?"
       speed={2}
       delay={0}
-      color="#b5b5b5"
+      // color="#b5b5b5"
+      color="#b5b5b59f"
       shineColor="#ffffff"
       spread={120}
       direction="left"
